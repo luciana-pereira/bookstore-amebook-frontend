@@ -12,7 +12,9 @@ import { ProductListComponent } from './components/bookstore-app/product-list/pr
 import { ProductItemComponent } from './components/bookstore-app/product-list/product-item/product-item.component';
 import { BooksService } from './components/bookstore-app/product-list/product-list.component.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +24,15 @@ import { HttpClientModule } from '@angular/common/http';
     BookstoreAppComponent,
     FiltersComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSliderModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
