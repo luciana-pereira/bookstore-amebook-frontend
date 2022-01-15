@@ -20,12 +20,12 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.books = this.bookService.getBook().subscribe((data => {
-
+    this.books = this.bookService.getBook()
+      .subscribe((data: any): void => {
       this.books = data;
       console.log(this.books);
 
-    }))
+    })
 
   }
 
